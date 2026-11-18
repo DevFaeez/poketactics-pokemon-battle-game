@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# PokéTactics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Pokémon strategy web game with 50 arena-ready Pokémon, turn-based 3v3 and 5v5 matches against a rule-based rival bot, and a Pokédex.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Draft three or five Pokémon, search by name, filter by type, and choose your lead.
+- Compare HP, attack, defense, speed, and moves before entering the arena.
+- Manage energy, type advantages, Guard, and switches during each match.
+- Watch actions resolve in sequence with attack effects, HP updates, and a battle log.
+- Browse Pokémon species, measurements, and base stats through PokéAPI.
 
-### `npm start`
+Arena stats and energy costs are tuned for this game.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run locally
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Requires Node.js, npm, and Python 3.
 
-### `npm test`
+Install the locked dependencies and build the app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm ci --ignore-scripts --no-bin-links
+npm run build
+npm start
+```
 
-### `npm run build`
+Open [http://127.0.0.1:4179/](http://127.0.0.1:4179/). The server listens on the local computer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Arena data and artwork are bundled with the project. Pokédex requests and Google Fonts require an internet connection.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React 17, JavaScript, HTML, CSS, esbuild, PokéAPI, and a Python HTTP server for local preview.
 
-### `npm run eject`
+## Credits
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Built from [Megh2507/Pokemon-App](https://github.com/Megh2507/Pokemon-App), with a redesigned interface and an added battle system.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pokémon species data comes from [PokéAPI](https://pokeapi.co/). Artwork comes from [PokeAPI/sprites](https://github.com/PokeAPI/sprites). Pokémon names and artwork belong to their respective owners. This is a fan project.

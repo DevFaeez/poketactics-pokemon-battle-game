@@ -1,38 +1,21 @@
 {
-  "name": "poke_app",
-  "version": "0.1.0",
+  "name": "poketactics-pokemon-battle-game",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "node scripts/build.mjs",
+    "start": "python3 -m http.server 4179 --bind 127.0.0.1 --directory build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "description": "A Pok\u00e9mon strategy web game with 50 Pok\u00e9mon, 3v3 and 5v5 battles against a rule-based bot, and a Pok\u00e9dex.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevFaeez/poketactics-pokemon-battle-game.git"
   }
 }
